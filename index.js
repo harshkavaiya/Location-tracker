@@ -12,6 +12,8 @@ const PORT = process.env.PORT || 3000;
 const server = http.createServer(app);
 const io = socketio(server);
 
+app.set("views", path.join(__dirname, "views"));
+
 // Set view engine
 app.set("view engine", "ejs");
 const users = {};
